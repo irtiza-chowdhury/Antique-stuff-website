@@ -1,0 +1,114 @@
+@import "../config/mixin";
+@import "../config/variable";
+@import "../utilities/utilities";
+.header{
+
+    &__offcanvas{
+        &-icon{
+            width: 22px;
+            height: 22px;
+        }
+        &-body{
+            position: relative;
+            &-content{
+                &-item{
+                    margin-top: 10px !important;
+
+                    &-link{
+                        font-size: 16px ;
+                        font-weight: 400 ;
+                        letter-spacing: normal ;
+                        // padding-left: 10px ;
+                        color: $black ;
+                        text-decoration: none ;
+                        border-radius: 4px;
+                        padding: 4px 10px;
+                        transition: all 0.4s ease-in-out;
+                        &:hover{
+                            font-weight: 500;
+                            background: #8ba19e;
+                            color: $white !important;
+                        }
+                    }
+                }
+            }
+            &-button{
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                width: 90%;
+                &-item{
+                    @include button;
+                }
+            }
+        }
+    }
+    .header__topnav{
+        
+        .header__topnav-title{
+            font-size: 20px;
+            font-weight: 700;
+            position: relative;
+
+            &::after{
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color: $golden;
+                border-radius: 50%;
+                content: '';
+                top: 60%;
+                left: 68px;
+            }
+        }
+        &-details{
+            ul{
+                li{
+                    opacity: 1 !important;
+                    a{
+                        font-size: 13px;
+                        // opacity: 1 !important;
+                        font-weight: 700;
+                        color: $black;
+                        transition: all 0.4s ease-in-out;
+    
+                        &:hover{
+                            position: relative;
+                            color: $orange;
+                            transition: all 0.4s ease-in-out;
+                            &::after{
+                                position: absolute;
+                                width: 20px;
+                                height: 2px;
+                                background: $orange;
+                                content: '';
+                                bottom: 0;
+                                left: 10px !important;
+                                transition: all 0.4s ease-in-out;
+                                @media (max-width: 990.98px){
+                                    left: 0;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        
+        .header__topnav-links{
+            margin: 0 auto;
+        }
+        &-button{
+           button{
+            @include button;
+           } 
+           
+        }
+                   
+    }
+   
+}
+
+    

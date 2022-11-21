@@ -1,0 +1,148 @@
+@import "../config/mixin";
+@import "../config/variable";
+@import "../utilities/utilities";
+.catagories{
+    margin: 80px 0;
+
+    &__owl-carouel{
+        position: relative;
+        padding-top: 60px;
+       @include nav-button;
+    }
+
+    &__text{
+        @include flexbetweenwrap;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        &-brief{
+            h3{
+                font-weight: 700;
+            }
+            p{
+                font-size: 13px;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    
+    &__sample{
+        border-radius: 10px;
+        position: relative;
+        padding-bottom: 10px;
+        align-self: auto;
+        flex: 0 1 46%;
+        margin: 0 10px 10px 0;
+        order: 0;
+
+        &-image{
+            border-radius: 10px;
+            border: none;
+            
+        }
+
+        #cardItem{
+            border-radius: 10px;
+            border: none;
+            transition: all 0.4s ease-in-out;
+            // width: fit-content;
+            &:hover{
+                box-shadow: 0 3px 3px 0 #b4b2b2, 0 3px 6px 2px #7a7a7a;
+                
+            }
+            #weapon{
+                height: 200px;
+                // width: 200px;           
+            }
+            #skull{
+                @extend #weapon;
+            }
+
+            #statue{
+                height: 425px;
+            }
+
+            #table{
+                height: 200px;
+                // width: 260px;
+            }
+
+            #watch{
+                height: 220px;
+                width: 100%;
+                
+            }
+            #chair{
+                height: 220px;
+                width: 100%;
+                
+            }
+        } 
+        
+       
+        .card-title{
+            button{
+                color: $golden;
+                font-size: 10px;
+                font-weight: 700;
+                border: none;
+                transition: all 0.4s ease-in-out;
+                &:hover{
+                    box-shadow: 0 3px 3px 0 #b4b2b2, 0 4px 6px 2px #7a7a7a;
+                }
+                
+            }
+            
+        }
+        &-name{
+            position: absolute;
+            bottom: 35px;
+            left: 20px;
+            font-weight: 700;
+            font-size: 15px;
+
+        }
+        &-type{
+            @extend .catagories__sample-name ;
+            bottom: 20px;
+            font-weight: 400;
+            font-size: 10px;
+            opacity: 0.7;
+        }
+   
+    }
+    &__flex{
+        // @include flexbetween;
+        gap: 10px;
+        align-content: stretch;
+        align-items: stretch;
+        display: flex;
+        // flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    
+
+    
+}
+@media (min-width:850px) and (max-width:899.98px){
+    #chair{
+        width: 110% !important;
+    }
+    .catagories__flex{
+        @include flexleft;
+        gap: 30px;
+        
+    }
+}
+@media (min-width:900px) and (max-width:999.98px) {
+    // #chair{
+    //     width: 100% !important;
+    // }
+    .catagories__flex{
+        // @include flexleft;
+        gap: inherit;
+        
+    }
+}
+

@@ -1,0 +1,18 @@
+// common css
+@import "../config/variable";
+body{
+    
+    background: $black !important;
+}
+
+.full-body{
+    width: 100%;
+    // margin: 20px auto;
+    background: $light_gray;
+    padding: 20px;
+    
+    .main-body{
+        background: $off_white;
+        padding: 20px;
+    }
+}

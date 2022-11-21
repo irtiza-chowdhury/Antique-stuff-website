@@ -1,0 +1,98 @@
+@import "../config/mixin";
+@import "../config/variable";
+@import "../utilities/utilities";
+
+.search{
+    @include flexbetweenwrap;
+    background: $white;
+    padding: 30px 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0px #bdbbbb, 0 3px 7px 0px #adabab;
+
+
+    &__content{
+        &-title{
+            font-size: 13px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        button{
+            background: $white;
+            border: none;
+            color: $black;
+            opacity: 0.8;
+            font-size: 13px;
+        }
+        input{
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        &--black{
+            button{
+                @include button;
+                background: $black;
+                font-size: 20px;
+                padding: 10px 30px;
+                span{
+                    padding-right: 10px;
+                }
+                
+            }
+        }
+        &-dropdown{
+            button{
+                &::after{
+                    margin-left: 20px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:571.98px){
+    .search__content{
+        width: 100%;
+        &-title{
+            width: 100%;
+            @include flexcenter;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        button{
+            width: 100%;
+            
+        }
+        ul{
+            transform: translate(75%, 35%);
+            li{
+                text-align: center;
+            }  
+        }
+        &-date{
+            @include flexcenter;
+        }
+
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media  (max-width:769.98px){
+    .search__content--black{
+        width: 100%;
+        padding-top: 30px;
+        @include flexcenter;
+
+        button{
+            // width: ;
+            
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+@mixin button {
+    border: none;
+    background: $orange;
+    font-size: 15px;
+    padding: 10px;
+    color: $white;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    
+
+    &:hover{
+        background: $darkblue;
+        border: none;
+        box-shadow: 0 1px 3px 0 #b4b2b2, 0 3px 6px 2px #7a7a7a;
+    }
+    
+}
+
+@mixin  nav-button {
+    .owl-nav{
+        position: absolute;
+        right: 0;
+        top: 0;
+        
+        button{
+            width: 30px;
+            height: 30px;
+            border: none !important;
+            background: $white !important;
+            border-radius: 50% !important;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                background: $orange !important;
+                color: $white !important;
+            }
+        } 
+    }
+}

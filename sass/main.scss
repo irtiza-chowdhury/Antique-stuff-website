@@ -1,0 +1,18 @@
+// config_scss
+@import "config/layout";
+@import "config/variable";
+@import "config/reset";
+@import "config/mixin";
+
+// utilities_scss
+
+
+// other_scss
+@import "other/header";
+@import "other/banner";
+@import "other/search";
+@import "other/review";
+@import "other/recent";
+@import "other/categories";
+@import "other/subscription";
+@import "other/footer";

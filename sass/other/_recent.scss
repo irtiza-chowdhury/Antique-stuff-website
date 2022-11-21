@@ -1,0 +1,112 @@
+@import "../config/mixin";
+@import "../config/variable";
+@import "../utilities/utilities";
+
+.recent{
+    padding-top: 70px;
+    
+    &__text{
+        @include flexbetweenwrap;
+        h3{
+            font-weight: 700;
+        }
+        p{
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        &-icon{
+            button{
+                width: 40px;
+                height: 40px;
+                border: none;
+                background: $white;
+                border-radius: 50%;
+
+                &:hover{
+                    background: $orange;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .item{
+        padding-bottom: 10px;
+        .card{
+            background: $off_white;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            // &-body{
+            //     border-bottom: none !important;
+            //     border-width: 0;
+            // }
+            
+            img{
+                height: 250px;
+                padding: 10px;
+                border-radius: 20px;
+            }
+            h5{
+                font-weight: 700;
+            }
+            .recent__item-type{
+                font-size: 13px;
+                font-weight: 700;
+                opacity: 0.5;
+                border-right: 1px solid $gray;
+                padding-right: 10px;
+                
+
+                &:last-child{
+                    border-right: none;
+                    padding-right: 0;
+                    padding-left: 10px;
+                }
+            }
+
+            ul{
+                border-top: none;
+                li{
+                    @include flexbetween;
+                    border-bottom: none;
+                    background: none;
+                    &:hover{
+                        background: $white;
+                    }
+
+                    .recent__item-price{
+                        font-weight: 700;
+                    }
+
+                    .recent__item-bid{
+                        font-size: 12px;
+                        font-weight: 700;
+                    }
+
+                    .recent__item-time{
+                        font-size: 12px;
+                        opacity: 0.6;
+                    }
+
+                    
+                }
+            }
+            &:hover{
+                background: $white;
+                cursor: pointer;
+                box-shadow: 0 2px 3px 0px #bdbbbb, 0 4px 8px 1px #adabab;
+            
+            }
+
+        }
+
+        
+    }
+
+    &__owl-carouel{
+        position: relative;
+        @include nav-button;
+        padding-top: 60px;
+    }
+}

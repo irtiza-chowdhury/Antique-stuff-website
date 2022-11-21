@@ -1,0 +1,97 @@
+@import "../config/mixin";
+@import "../config/variable";
+@import "../utilities/utilities";
+.subscription{
+    position: relative;
+    margin: 80px 0;
+    padding: 40px;
+    background: $deep_blue;
+    color: $white;
+    border-radius: 10px;
+    
+
+    h2{
+        font-weight: 700;
+    }
+    p{
+        font-size: 13px;
+    }
+    &__mail{
+        position: relative;
+        width: fit-content;
+        margin-top: 40px;
+        input{
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+
+        }
+        button{
+            position: absolute;
+            right:20px;
+            bottom: 10px;
+            background: $orange;
+            color: $white;
+            border: none;
+            border-radius: 5px;
+
+            &:hover{
+                background: $darkblue;
+            }
+        }
+        
+    }
+
+    &__image{
+        position: absolute;
+        right: 50px;
+        bottom: 10px;
+        height: 270px;
+        // box-shadow: 3px 4px 15px $black;
+        // border-radius: 15px;
+
+        img{
+            height: 100%;
+            border-radius: 15px;
+        }
+    }
+}
+
+
+@media(max-width:499.98px){
+
+    .subscription{
+        padding: 40px 10px;
+
+        &__mail{
+            input{
+                width: 100%;
+                
+            }
+        }
+    }
+    .subscription__image{
+        position: relative;
+        @include flexleft;
+        padding: 40px 0 0 30px;
+        height: 220px;
+        box-shadow: none;
+    }
+}
+
+@media (min-width:500px) and (max-width:899.98px){
+    .subscription__image{
+        position: relative;
+        padding: 40px 0 0 40px;
+        box-shadow: none;
+    }
+}
+// @media (max-width:499.98px){
+//     .subscription__image{
+//         position: relative;
+//         padding: 40px 0 0 60px;
+        
+//     }
+// }
